@@ -1,0 +1,93 @@
+=========UserTable========
+create table user(
+    id int(10)  primary key auto_increment,
+    username varchar(50),
+    password varchar(50),
+    email varchar(50),
+    createtime timestamp not null default now(),
+    isenable bit(1) not null default 1
+);
+
+insert into user (username,password) values ('admin','admin');
+=====RouteTable=====shareid 关联 UserTable表中的id
+create table sharedroute(
+    id int(10)  primary key auto_increment,
+    sharerid int(10),
+    routeid int(10),
+    shareroutedesc varchar(500) not null default '',
+    showtimes int(10) not null default 0,
+    up int(10) not null default 0,
+    down int(10) not null default 0,
+    createtime timestamp not null default now(),
+    isenable bit(1) not null default 1
+);
+insert into sharedroute (sharerid,routeid) values(1,1);
+
+
+create table routeinfo(
+    id int(10)  primary key auto_increment,
+    startpoint nvarchar(200) not null,
+    endpoint nvarchar(200) not null,
+    type int(2) not null default -1,
+    createtime timestamp not null default now(),
+    isenable bit(1) not null default 1
+);
+insert into routeinfo (startpoint,endpoint) values ('南京工业大学','新街口');
+=====SearchPlace======
+create table searchplace(
+    id int(10) primary key auto_increment,
+    name varchar(50),
+    desc varchar(50),
+);
+
+
+// 百度地图API功能
+var map = new BMap.Map("l-map");            // 创建Map实例
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 12);
+var transit = new BMap.TransitRoute(map, {
+  renderOptions: {map: map,panel:"r-result"},
+  policy:BMAP_TRANSIT_POLICY_AVOID_SUBWAYS   //不乘地铁  
+    //BMAP_TRANSIT_POLICY_LEAST_TIME	最少时间。
+    //BMAP_TRANSIT_POLICY_LEAST_TRANSFER	最少换乘。
+    //BMAP_TRANSIT_POLICY_LEAST_WALKING	最少步行。
+    //BMAP_TRANSIT_POLICY_AVOID_SUBWAYS	不乘地铁。(自 1.2 新增)
+});
+transit.search("王府井", "西单");
+
+<span style="visibility:hidden"><%=sharedRouteModel.getId() %></span>
+
+    function addUpNumb(){
+        alert("===========");
+        createXmlHttp();
+        var sharedrouteid = document.getElementById("sharedrouteid").innerHTML;
+        var upnumb = document.getElementById("upnumb").innerHTML;
+        alert(sharedrouteid);
+        alert(upnumb);
+        var url = "/MyDemo/servlet/AddUpNumbServlet?sharedrouteid=" + sharedrouteid + "&upnumb=" + upnumb;
+        xmlHttp.open("POST",url);
+        xmlHttp.send(null);
+        xmlHttp.onreadystatechange = addUpNumbCallback;
+    }
+    function addUpNumbCallback(){
+         if (xmlHttp.readyState == 4) {
+            if (xmlHttp.status == 200) {
+              var spanid = "upnumb";
+            }
+         }
+    }
+    function addDownNumb(){
+         createXmlHttp();
+        var sharedrouteid = document.getElementById("sharedrouteid").innerHTML;
+        var downnumb = document.getElementById("downnumb").innerHTML;
+        var url = "/MyDemo/servlet/AddDownNumbServlet?sharedrouteid=" + sharedrouteid + "&down=" + downnumb;
+        xmlHttp.open("POST",url);
+        xmlHttp.send(null);
+        xmlHttp.onreadystatechange = addDownNumbCallback;
+    }
+    function addUpNumbCallback(){
+         if (xmlHttp.readyState == 4) {
+            if (xmlHttp.status == 200) {
+               
+            }
+         }
+    }
