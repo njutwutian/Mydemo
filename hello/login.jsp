@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
     <title>Routing Map</title>
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:31600/MyDemo/CSS/login.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/login.css" />
 </head>
 
 <body>

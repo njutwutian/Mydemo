@@ -1,5 +1,5 @@
 @CHARSET "UTF-8";
-body {background-image: url(http://127.0.0.1:31600/MyDemo/Img/backg.jpg);
+body {background-image: url(/Img/backg.jpg);
 
 background-position: center;
 
@@ -20,7 +20,7 @@ a:hover{color:#626262}
 
 .loginFormIpt,
 .btn,
-.ico{background-image:url(http://127.0.0.1:31600/MyDemo/Img/bg_v1.png)}
+.ico{background-image:url(/Img/bg_v1.png)}
 
 .loginFormTdIpt
 {position:absolute}
@@ -33,7 +33,7 @@ a:hover{color:#626262}
     width:295px;height:460px;padding:14px 16px 15px;top:55px;
     left:50%;margin-left:90px;text-align:left;position:absolute;
     z-index:2;
-    background:url(http://127.0.0.1:31600/MyDemo/Img/2013/login_v1_2.png) no-repeat;
+    background:url(/Img/2013/login_v1_2.png) no-repeat;
     }
 .loginFunc{
 	font-family:verdana;
