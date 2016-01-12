@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+#main{
+         margin-top: 3%;
+         padding-top: 30px ;
+         height: 480px;
+         background-image: url("http://127.0.0.1:31600/MyDemo/Img/bgimg.jpg");
+      }
+#loginmain{
+         opacity: 0.6;
+         opacity: 0.6;                   /* Firefox, Safari(WebKit), Opera)*/
+         filter: "alpha(opacity=60)"; /* IE 8 */
+         filter: alpha(opacity=60);    /* IE 4-7 */
+         margin-top: 50px;
+         margin-left: 60%;
+         height: 340px;
+         width: 300px;
+         background: #fefefe;
+         border: 1px solid #eaeaea;
+         border-bottom: 1px solid #cbcbcb;
+         border-top: none;
+         box-shadow: 1px 1px 1px #eaeaea;
+}
+h3 {
+    margin: 0;
+    margin-bottom: 23px;
+    font-size: 1.25em;
+    color: #747474;
+    padding: 32px 30px 0 30px;
+}
+#userinfo{
+    padding: 0 30px;
+}
+#loginform{
+    margin: 0;
+    padding: 0;
+    padding-right: 8px;
+}
+#userpass{
+
+}
+.user-name,
+.pass-word {
+    background: #fff;
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: 2px solid #e1e1e1;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-indent: 43px;
+    outline: 0;
+    font-size: 1.00em;
+    *line-height: 20px;
+}
+.user-name:focus,
+.pass-word:focus {
+    border: 2px solid #d6f1ff;
+}
+.user-name {
+    background: url("http://127.0.0.1:31600/MyDemo/Img/username.png") no-repeat 15px center;
+}
+.pass-word {
+    background: url("http://127.0.0.1:31600/MyDemo/Img/password.png") no-repeat 15px center;
+    margin-bottom: 0;
+}
+.extralogin {
+    margin-top: 10px;
+    color: #999;
+    font-size: 0.8em;
+    *padding: 0 10px;
+}
+.extralogin span {
+    *padding: 0px;
+}
+.extralogin a {
+    color: #999;
+    text-decoration: none;
+}
+.extralogin a:hover {
+    text-decoration: underline;
+}
+.logging {
+    background: #dc3c00;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.00em;
+    text-decoration: none;
+    clear: both;
+    width: 100%;
+    border: none;
+}
+.logging:hover {
+    background: #b43200;
+    color: #fff;
+    text-decoration: none;
+}
