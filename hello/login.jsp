@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
     <title>Routing Map</title>
-    <link rel="stylesheet" type="text/css" href="/CSS/login.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/login.css" />
 </head>
 
 <body>
@@ -62,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         createXmlHttp();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
-        var url = "/MyDemo/servlet/CheckLoginServlet?username=" + username + "&password=" + password;
+        var url = "/hello/servlet/CheckLoginServlet?username=" + username + "&password=" + password;
         xmlHttp.open("POST",url);
         xmlHttp.send(null);
         xmlHttp.onreadystatechange = showCheckInfoCallback;
@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 var obj = eval("(" + text + ")");
                 document.getElementById("msg").innerHTML = obj.data;
                 if(obj.flag==1){
-                	window.location.href="/MyDemo/index.jsp";
+                	window.location.href="/hello/index.jsp";
                 }
             }
         } 
