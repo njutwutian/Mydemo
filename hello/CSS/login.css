@@ -3,7 +3,7 @@
          margin-top: 3%;
          padding-top: 30px ;
          height: 480px;
-         background-image: url("/Img/bgimg.jpg");
+         background-image: url("./Img/bgimg.jpg");
       }
 #loginmain{
          opacity: 0.6;
@@ -57,10 +57,10 @@ h3 {
     border: 2px solid #d6f1ff;
 }
 .user-name {
-    background: url("/Img/username.png") no-repeat 15px center;
+    background: url("./Img/username.png") no-repeat 15px center;
 }
 .pass-word {
-    background: url("/Img/password.png") no-repeat 15px center;
+    background: url("./Img/password.png") no-repeat 15px center;
     margin-bottom: 0;
 }
 .extralogin {
