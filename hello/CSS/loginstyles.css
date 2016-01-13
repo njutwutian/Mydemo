@@ -1,5 +1,5 @@
 @CHARSET "UTF-8";
-body {background-image: url(./Img/backg.jpg);
+body {background-image: url(../Img/backg.jpg);
 
 background-position: center;
 
@@ -20,7 +20,7 @@ a:hover{color:#626262}
 
 .loginFormIpt,
 .btn,
-.ico{background-image:url(./Img/bg_v1.png)}
+.ico{background-image:url(../Img/bg_v1.png)}
 
 .loginFormTdIpt
 {position:absolute}
